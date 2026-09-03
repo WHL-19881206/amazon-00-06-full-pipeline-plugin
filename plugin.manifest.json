@@ -1,0 +1,20 @@
+{
+  "plugin_id": "amazon-00-06-full-pipeline",
+  "name": "Amazon 00-06 Full Pipeline",
+  "version": "2026-09-03",
+  "entrypoint": "SKILL.md",
+  "routing": {
+    "default": "AUTO_ROUTE",
+    "explicit_skill_ids": ["00", "01", "02", "03", "04", "05", "06"],
+    "full_pipeline_mode": "FULL_PIPELINE_NEW_PRODUCT"
+  },
+  "skills": [
+    {"id": "00", "path": "skills/amazon-00/SKILL.md", "owner": "Governance, Product Truth, Policy, Orchestration, Final QA"},
+    {"id": "01", "path": "skills/amazon-01/SKILL.md", "owner": "Search Demand & Keywords"},
+    {"id": "02", "path": "skills/amazon-02/SKILL.md", "owner": "Listing Copy"},
+    {"id": "03", "path": "skills/amazon-03/SKILL.md", "owner": "Listing Images"},
+    {"id": "04", "path": "skills/amazon-04/SKILL.md", "owner": "A+ Content"},
+    {"id": "05", "path": "skills/amazon-05/SKILL.md", "owner": "Ads & PPC"},
+    {"id": "06", "path": "skills/amazon-06/SKILL.md", "owner": "Native Upload Template Compiler"}
+  ]
+}
