@@ -1,0 +1,24 @@
+{
+  "name": "amazon-00-06-full-pipeline-plugin",
+  "version": "1.0.0",
+  "description": "Amazon 00–06 全链路生产插件：一个插件入口，内部保留 00–06 七个独立 Skill。根据用户任务自动选择最小必要 Skill/链路，也支持显式调用 AMAZON 00–06 与 FULL_PIPELINE_NEW_PRODUCT。",
+  "author": {
+    "name": "WHL19"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Amazon 00–06 全链路",
+    "shortDescription": "一个插件入口，七个独立 Amazon 生产 Skill，支持自动路由与完整新品全链路。",
+    "longDescription": "内部包含 00 治理/政策/Product Truth/编排、01 搜索需求与关键词、02 Listing 文案、03 Listing 九图、04 A+、05 Ads/PPC、06 Amazon 原生上传模板编译。默认根据用户最终业务目标与 Owner Boundary 选择最小必要 Skill，不预加载全部七个 Skill；只有明确要求完整新品全链路时执行 00_INIT→01→02→03→04→05→06→00_FINAL_QA→RELEASE_DECISION。业务深度、Product Truth、Variation、当前政策、真实 Final Asset 与硬验收不降级。",
+    "developerName": "WHL19",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "根据我的 Amazon 任务自动选择 00–06 中最小必要的 Skill 或 Skill 链路；不要因为插件包含七个 Skill 就默认全部加载或全部执行。",
+      "当我明确输入 AMAZON 00、AMAZON 01、AMAZON 02、AMAZON 03、AMAZON 04、AMAZON 05 或 AMAZON 06 时，优先执行指定 Skill；只有真实 Hard Dependency 才追加必要上游或下游。",
+      "当我输入 AMAZON FULL_PIPELINE_NEW_PRODUCT 或明确要求完整新品全链路时，执行 00_INIT→01→02→03→04→05→06→00_FINAL_QA→RELEASE_DECISION，并采用 dependency-aware 局部返工，不因非依赖局部问题冻结全部链路。",
+      "业务成品优先，但不得降低 Product Truth、Variation/Child Truth、当前 Amazon Hard Rule、Claim Evidence、真实 Final Asset、06 Workbook Reopen Validation 与最终 Release QA。"
+    ],
+    "brandColor": "#FF9900"
+  }
+}
