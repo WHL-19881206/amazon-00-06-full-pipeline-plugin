@@ -1,0 +1,20 @@
+{
+  "name": "amazon-00-06-full-pipeline-marketplace",
+  "interface": {
+    "displayName": "Amazon 00–06 全链路插件"
+  },
+  "plugins": [
+    {
+      "name": "amazon-00-06-full-pipeline-plugin",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
