@@ -1,0 +1,7 @@
+{
+  "skill_id": "01",
+  "name": "Amazon 01 Search Demand & Keywords",
+  "owner": "Search Demand & Keywords",
+  "entrypoint": "SKILL.md",
+  "standalone": true
+}

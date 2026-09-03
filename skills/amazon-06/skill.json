@@ -1,0 +1,7 @@
+{
+  "skill_id": "06",
+  "name": "Amazon 06 Native Template Compiler",
+  "owner": "Native Upload Template Compiler",
+  "entrypoint": "SKILL.md",
+  "standalone": true
+}
